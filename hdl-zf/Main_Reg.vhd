@@ -8,7 +8,6 @@ port (
     -- 系统信号
     CLK                     : in  std_logic;  -- 时钟信号
     RST_N                   : in  std_logic;  -- 复位信号（低电平有效）
-
     -- 寄存器读写接口
     reg_wr                  : in  std_logic;  -- 寄存器写信号
     reg_waddr               : in  std_logic_vector(15 downto 0);  -- 寄存器写地址
@@ -16,13 +15,11 @@ port (
     reg_rd                  : in  std_logic;  -- 寄存器读信号
     reg_raddr               : in  std_logic_vector(15 downto 0);  -- 寄存器读地址
     reg_rdata               : out std_logic_vector(31 downto 0);  -- 寄存器读数据
-
-    -- 杂项功能接口
+    -- 自定义功能接口
     misc_set_flag           : out std_logic;  -- 杂项设置标志
     misc_set_data           : out std_logic_vector(31 downto 0);  -- 杂项设置数据
     Usr_Int                 : out std_logic;  -- 用户中断信号
     tx_req_bit              : out std_logic;  -- 发送请求位
-
     -- 调试状态接口
     m00_axis_debug_state    : in  std_logic_vector(31 downto 0);  -- M00_AXIS 调试状态
     s00_axis_debug_state    : in  std_logic_vector(31 downto 0)  -- S00_AXIS 调试状态

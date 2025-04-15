@@ -8,16 +8,13 @@ port (
     -- SYS
     CLK             : in std_logic;
     RST_N           : in std_logic;
-    
     -- ctl
     set_flag    : in std_logic;   -- 1 clock width
     set_data    : in std_logic_vector(31 downto 0);
-    
     -- for tx_ram write
     tx_ram_wen      : out std_logic;
     tx_ram_waddr    : out std_logic_vector(9 downto 0);
     tx_ram_wdata    : out std_logic_vector(31 downto 0);
-
     -- for rx_ram read
     rx_ram_raddr    : out std_logic_vector(9 downto 0);
     rx_ram_rdata    : in std_logic_vector(31 downto 0)
